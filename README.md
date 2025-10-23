@@ -102,6 +102,46 @@ Each artifact has a unique color theme that:
 
 ---
 
+## 🚀 Deployment on Netlify
+
+### Quick Deploy
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kostyakunak/neomuse-art-gallery)
+
+### Manual Deployment
+
+1. **Fork this repository** to your GitHub account
+2. **Connect to Netlify**:
+   - Go to [Netlify](https://app.netlify.com)
+   - Click "New site from Git"
+   - Choose GitHub and select your forked repository
+3. **Configure build settings**:
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+   - Node version: `18`
+4. **Set environment variables**:
+   - `VITE_SUPABASE_URL`: Your Supabase project URL
+   - `VITE_SUPABASE_ANON_KEY`: Your Supabase anonymous key
+5. **Deploy**: Click "Deploy site"
+
+### Environment Variables
+
+Create these environment variables in your Netlify dashboard:
+
+```env
+VITE_SUPABASE_URL=your_supabase_project_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+### Project Structure for Netlify
+
+The project includes:
+- `netlify.toml` - Netlify configuration file
+- `public/_redirects` - SPA routing configuration
+- Optimized build process with Vite
+
+---
+
 ## 🚀 Getting Started
 
 ### Prerequisites
