@@ -2,7 +2,7 @@
 
 An immersive, interactive 3D art gallery experience built with cutting-edge web technologies. This project showcases modern frontend development techniques including real-time 3D transformations, smooth animations, and dynamic database integration.
 
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://your-demo-link.com)
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://neomuse.netlify.app)
 [![Built with React](https://img.shields.io/badge/React-18.3-61dafb)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue)](https://www.typescriptlang.org/)
 [![Supabase](https://img.shields.io/badge/Supabase-Database-3ecf8e)](https://supabase.com/)
@@ -102,45 +102,13 @@ Each artifact has a unique color theme that:
 
 ---
 
-## 🚀 Deployment on Netlify
+## 🌐 Live Demo
 
-### Quick Deploy
+**🎨 [View Live Gallery →](https://neomuse.netlify.app)**
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kostyakunak/neomuse-art-gallery)
+Experience the interactive 3D art gallery with real-time animations and smooth transitions. Built with React, TypeScript, and Supabase, hosted on Netlify.
 
-### Manual Deployment
-
-1. **Fork this repository** to your GitHub account
-2. **Connect to Netlify**:
-   - Go to [Netlify](https://app.netlify.com)
-   - Click "New site from Git"
-   - Choose GitHub and select your forked repository
-3. **Configure build settings**:
-   - Build command: `npm run build`
-   - Publish directory: `dist`
-   - Node version: `18`
-4. **Set environment variables**:
-   - `SUPABASE_URL`: Your Supabase project URL
-   - `SUPABASE_ANON_KEY`: Your Supabase anonymous key
-5. **Deploy**: Click "Deploy site"
-
-### Environment Variables
-
-Create these environment variables in your Netlify dashboard:
-
-```env
-SUPABASE_URL=https://cmloioogvxaucawwipwt.supabase.co
-SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNtbG9pb29ndnhhdWNhd3dpcHd0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjEyNDc5MzYsImV4cCI6MjA3NjgyMzkzNn0.-Xr-ti1-1nUA2pL0Ga2QOStZ9Rj3FmpYM9roiH5TP70
-```
-
-**Note:** Replace with your own Supabase credentials when deploying your own version.
-
-### Project Structure for Netlify
-
-The project includes:
-- `netlify.toml` - Netlify configuration file
-- `public/_redirects` - SPA routing configuration
-- Optimized build process with Vite
+> **Portfolio Note:** This is a copy of a real client project, showcased here as a portfolio demonstration of modern web development capabilities.
 
 ---
 
@@ -151,31 +119,7 @@ The project includes:
 - npm or yarn
 - Supabase account (free tier works great)
 
-### Installation
 
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/neomuse.git
-
-# Navigate to project directory
-cd neomuse
-
-# Install dependencies
-npm install
-
-# Set up environment variables
-cp .env.example .env
-# Add your Supabase credentials to .env
-```
-
-### Environment Variables
-
-Create a `.env` file with:
-
-```env
-SUPABASE_URL=your_supabase_project_url
-SUPABASE_ANON_KEY=your_supabase_anon_key
-```
 
 ### Development
 
@@ -224,81 +168,6 @@ The application uses a single, well-structured table:
 
 ---
 
-## 🎯 Use Cases
-
-This project demonstrates skills valuable for:
-
-### E-commerce Platforms
-- Product galleries with interactive previews
-- Dynamic filtering and categorization
-- Engaging hover effects for product cards
-
-### Portfolio Websites
-- Project showcases with rich media
-- Case study presentations
-- Creative industry websites
-
-### Content Management Systems
-- Media library interfaces
-- Image galleries and lightboxes
-- Admin dashboards with visual content
-
-### Marketing Sites
-- Hero sections with interactive elements
-- Feature showcases with animations
-- Landing pages with engagement hooks
-
----
-
-## 🔧 Customization Guide
-
-### Adding New Artifacts
-
-```typescript
-// Use Supabase Studio or run this SQL:
-INSERT INTO artifacts (
-  title, artist, year, description,
-  image_url, category, color_theme, display_order
-) VALUES (
-  'Your Title',
-  'Artist Name',
-  '2024',
-  'Description here',
-  'https://images.pexels.com/...',
-  'digital',
-  '#3b82f6',
-  9
-);
-```
-
-### Customizing Animations
-
-Edit `src/index.css` to modify animation timings:
-
-```css
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px); /* Adjust distance */
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-```
-
-### Adjusting 3D Effect Intensity
-
-In `src/components/ArtifactCard.tsx`, modify the rotation multipliers:
-
-```typescript
-const rotateX = ((y - centerY) / centerY) * -15; // Change -15 to -20 for more tilt
-const rotateY = ((x - centerX) / centerX) * 15;  // Change 15 to 20 for more tilt
-```
-
----
-
 ## 📱 Responsive Design
 
 The gallery adapts seamlessly across devices:
@@ -331,36 +200,6 @@ All interactions work perfectly on touch devices with tap-based navigation.
 
 ---
 
-## 🧪 Testing Approach
-
-### Manual Testing Checklist
-- ✅ Cards tilt smoothly when hovering
-- ✅ Modal opens/closes with animations
-- ✅ Background gradient follows mouse
-- ✅ Data loads from Supabase
-- ✅ Responsive on all screen sizes
-- ✅ Keyboard navigation (ESC to close modal)
-
-### Browser Compatibility
-- ✅ Chrome/Edge (latest)
-- ✅ Firefox (latest)
-- ✅ Safari (latest)
-- ✅ Mobile browsers (iOS/Android)
-
----
-
-## 🎓 Learning Outcomes
-
-Building this project taught valuable skills in:
-
-1. **Advanced CSS** - Transform matrices, perspective, and 3D space
-2. **React Patterns** - State management, event handling, and hooks
-3. **TypeScript** - Interface design and type safety
-4. **Database Design** - Schema creation and RLS policies
-5. **Animation Timing** - Easing functions and orchestration
-6. **Performance** - Rendering optimization and efficient re-renders
-
----
 
 ## 🚀 Future Enhancements
 
@@ -377,41 +216,3 @@ Potential features for expansion:
 
 ---
 
-## 📄 License
-
-This project is available for portfolio use and demonstration purposes.
-
----
-
-## 👤 About the Developer
-
-This project was built to demonstrate modern web development capabilities, focusing on:
-- **Interactive user experiences** that engage and delight
-- **Performance-conscious development** that scales
-- **Clean, maintainable code** that other developers can work with
-- **Real-world applications** of cutting-edge technologies
-
-Perfect for clients seeking developers who can deliver **premium, production-ready web applications** with attention to detail and user experience.
-
----
-
-## 📞 Let's Build Something Amazing
-
-Interested in working together? I specialize in:
-- ⚡ High-performance React applications
-- 🎨 Interactive UI/UX experiences
-- 🗄️ Full-stack development with modern backends
-- 📱 Responsive, mobile-first design
-- 🚀 From concept to deployment
-
-**Contact me to discuss your next project!**
-
----
-
-<div align="center">
-
-**Built with ❤️ using React, TypeScript, and Supabase**
-
-[View Live Demo](#) • [Contact Developer](#) • [More Projects](#)
-
-</div>

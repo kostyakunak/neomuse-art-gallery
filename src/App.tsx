@@ -93,7 +93,7 @@ function App() {
                 </h2>
                 <p className="text-gray-400 text-lg leading-relaxed">
                   Explore a handpicked selection of contemporary digital art and photography.
-                  Hover over each piece to experience interactive 3D effects, click to view details.
+                  Click on the icon to view details.
                 </p>
               </div>
 
