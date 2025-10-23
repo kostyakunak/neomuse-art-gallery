@@ -120,8 +120,8 @@ Each artifact has a unique color theme that:
    - Publish directory: `dist`
    - Node version: `18`
 4. **Set environment variables**:
-   - `VITE_SUPABASE_URL`: Your Supabase project URL
-   - `VITE_SUPABASE_ANON_KEY`: Your Supabase anonymous key
+   - `SUPABASE_URL`: Your Supabase project URL
+   - `SUPABASE_ANON_KEY`: Your Supabase anonymous key
 5. **Deploy**: Click "Deploy site"
 
 ### Environment Variables
@@ -129,9 +129,11 @@ Each artifact has a unique color theme that:
 Create these environment variables in your Netlify dashboard:
 
 ```env
-VITE_SUPABASE_URL=your_supabase_project_url
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+SUPABASE_URL=https://cmloioogvxaucawwipwt.supabase.co
+SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNtbG9pb29ndnhhdWNhd3dpcHd0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjEyNDc5MzYsImV4cCI6MjA3NjgyMzkzNn0.-Xr-ti1-1nUA2pL0Ga2QOStZ9Rj3FmpYM9roiH5TP70
 ```
+
+**Note:** Replace with your own Supabase credentials when deploying your own version.
 
 ### Project Structure for Netlify
 
@@ -171,8 +173,8 @@ cp .env.example .env
 Create a `.env` file with:
 
 ```env
-VITE_SUPABASE_URL=your_supabase_project_url
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+SUPABASE_URL=your_supabase_project_url
+SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 
 ### Development
