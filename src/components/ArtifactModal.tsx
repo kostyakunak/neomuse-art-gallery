@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { X } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { X, Image as ImageIcon } from 'lucide-react';
 import { Artifact } from '../lib/supabase';
 
 interface ArtifactModalProps {
@@ -8,12 +8,19 @@ interface ArtifactModalProps {
 }
 
 export default function ArtifactModal({ artifact, onClose }: ArtifactModalProps) {
+  const [imageError, setImageError] = useState(false);
+
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     return () => {
       document.body.style.overflow = 'unset';
     };
   }, []);
+
+  // Сброс ошибки при изменении изображения
+  useEffect(() => {
+    setImageError(false);
+  }, [artifact.image_url]);
 
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {

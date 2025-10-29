@@ -1,5 +1,6 @@
-import { useState, useRef, MouseEvent } from 'react';
+import { useState, useRef, MouseEvent, useEffect } from 'react';
 import { Artifact } from '../lib/supabase';
+import { Image as ImageIcon } from 'lucide-react';
 
 interface ArtifactCardProps {
   artifact: Artifact;
@@ -8,7 +9,13 @@ interface ArtifactCardProps {
 
 export default function ArtifactCard({ artifact, onClick }: ArtifactCardProps) {
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
+  const [imageError, setImageError] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
+
+  // Сброс ошибки при изменении изображения
+  useEffect(() => {
+    setImageError(false);
+  }, [artifact.image_url]);
 
   const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
     if (!cardRef.current) return;
@@ -42,11 +49,21 @@ export default function ArtifactCard({ artifact, onClick }: ArtifactCardProps) {
       onClick={onClick}
     >
       <div className="relative overflow-hidden rounded-2xl shadow-2xl aspect-[3/4] transform transition-all duration-500 group-hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)]">
-        <img
-          src={artifact.image_url}
-          alt={artifact.title}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-        />
+        {imageError ? (
+          <div className="w-full h-full bg-black flex items-center justify-center">
+            <div className="text-center space-y-3">
+              <ImageIcon className="w-16 h-16 mx-auto text-gray-600" />
+              <p className="text-gray-500 text-sm">Изображение недоступно</p>
+            </div>
+          </div>
+        ) : (
+          <img
+            src={artifact.image_url}
+            alt={artifact.title}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            onError={() => setImageError(true)}
+          />
+        )}
 
         <div
           className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"

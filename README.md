@@ -9,6 +9,16 @@ An immersive, interactive 3D art gallery experience built with cutting-edge web 
 
 ---
 
+## 🌐 Live Demo
+
+https://neomuse.netlify.app
+
+Experience the interactive 3D art gallery with real-time animations and smooth transitions. Built with React, TypeScript, and Supabase, hosted on Netlify.
+
+> **Portfolio Note:** This is a copy of a real client project, showcased here as a portfolio demonstration of modern web development capabilities.
+
+---
+
 ## 🌟 Project Highlights
 
 ### Interactive 3D Effects
@@ -99,16 +109,6 @@ Each artifact has a unique color theme that:
 - Influences the overlay gradient
 - Appears as accent dots and badges
 - Provides visual categorization
-
----
-
-## 🌐 Live Demo
-
-**🎨 [View Live Gallery →](https://neomuse.netlify.app)**
-
-Experience the interactive 3D art gallery with real-time animations and smooth transitions. Built with React, TypeScript, and Supabase, hosted on Netlify.
-
-> **Portfolio Note:** This is a copy of a real client project, showcased here as a portfolio demonstration of modern web development capabilities.
 
 ---
 
