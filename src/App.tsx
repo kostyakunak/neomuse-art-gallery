@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Eye, Sparkles } from 'lucide-react';
-import { supabase, Artifact } from './lib/supabase';
+import { Artifact } from './lib/supabase';
 import ArtifactCard from './components/ArtifactCard';
 import ArtifactModal from './components/ArtifactModal';
+import artifactsData from './data/artifacts.json';
 
 function App() {
   const [artifacts, setArtifacts] = useState<Artifact[]>([]);
@@ -28,15 +29,16 @@ function App() {
 
   const fetchArtifacts = async () => {
     setLoading(true);
-    const { data, error } = await supabase
-      .from('artifacts')
-      .select('*')
-      .order('display_order', { ascending: true });
-
-    if (error) {
-      console.error('Error fetching artifacts:', error);
-    } else {
-      setArtifacts(data || []);
+    try {
+      // Load artifacts from static JSON file
+      // Sort by display_order to maintain the same order as before
+      const sortedArtifacts = [...artifactsData].sort(
+        (a, b) => a.display_order - b.display_order
+      );
+      setArtifacts(sortedArtifacts);
+    } catch (error) {
+      console.error('Error loading artifacts:', error);
+      setArtifacts([]);
     }
     setLoading(false);
   };

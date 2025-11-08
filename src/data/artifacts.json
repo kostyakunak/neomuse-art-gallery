@@ -1,0 +1,99 @@
+[
+  {
+    "id": "1",
+    "title": "Digital Dreams",
+    "artist": "Alex Chen",
+    "year": "2024",
+    "description": "A mesmerizing digital artwork exploring the intersection of technology and human emotion through vibrant color gradients and abstract forms.",
+    "image_url": "https://images.pexels.com/photos/1109541/pexels-photo-1109541.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "category": "digital",
+    "color_theme": "#8b5cf6",
+    "display_order": 1,
+    "created_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "2",
+    "title": "Urban Symphony",
+    "artist": "Maria Rodriguez",
+    "year": "2023",
+    "description": "A dynamic composition capturing the rhythm and energy of city life through bold geometric patterns and contrasting colors.",
+    "image_url": "https://images.pexels.com/photos/1109542/pexels-photo-1109542.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "category": "photography",
+    "color_theme": "#ef4444",
+    "display_order": 2,
+    "created_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "3",
+    "title": "Abstract Harmony",
+    "artist": "David Kim",
+    "year": "2024",
+    "description": "An exploration of form and color that challenges traditional perspectives while maintaining visual balance and emotional depth.",
+    "image_url": "https://images.pexels.com/photos/1109543/pexels-photo-1109543.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "category": "painting",
+    "color_theme": "#10b981",
+    "display_order": 3,
+    "created_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "4",
+    "title": "Neon Reflections",
+    "artist": "Sarah Johnson",
+    "year": "2023",
+    "description": "A futuristic piece that plays with light and reflection, creating an immersive experience that transports viewers to another dimension.",
+    "image_url": "https://images.pexels.com/photos/1109544/pexels-photo-1109544.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "category": "digital",
+    "color_theme": "#f59e0b",
+    "display_order": 4,
+    "created_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "5",
+    "title": "Minimalist Essence",
+    "artist": "James Wilson",
+    "year": "2024",
+    "description": "A study in simplicity and elegance, proving that sometimes less is more when it comes to artistic expression.",
+    "image_url": "https://images.pexels.com/photos/1109545/pexels-photo-1109545.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "category": "sculpture",
+    "color_theme": "#6366f1",
+    "display_order": 5,
+    "created_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "6",
+    "title": "Cosmic Journey",
+    "artist": "Elena Petrov",
+    "year": "2024",
+    "description": "An interstellar voyage captured through swirling galaxies and cosmic colors that evoke wonder and exploration.",
+    "image_url": "https://images.pexels.com/photos/1109546/pexels-photo-1109546.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "category": "digital",
+    "color_theme": "#ec4899",
+    "display_order": 6,
+    "created_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "7",
+    "title": "Nature's Canvas",
+    "artist": "Michael Brown",
+    "year": "2023",
+    "description": "A celebration of natural beauty through organic shapes and earth tones that connect us to the natural world.",
+    "image_url": "https://images.pexels.com/photos/1109547/pexels-photo-1109547.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "category": "painting",
+    "color_theme": "#059669",
+    "display_order": 7,
+    "created_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "8",
+    "title": "Metropolitan Pulse",
+    "artist": "Lisa Zhang",
+    "year": "2024",
+    "description": "The heartbeat of the city captured through dynamic lines and urban energy that reflects modern life.",
+    "image_url": "https://images.pexels.com/photos/1109548/pexels-photo-1109548.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "category": "photography",
+    "color_theme": "#dc2626",
+    "display_order": 8,
+    "created_at": "2024-01-01T00:00:00Z"
+  }
+]
+
