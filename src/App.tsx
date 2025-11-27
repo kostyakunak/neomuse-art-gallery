@@ -3,6 +3,10 @@ import { Eye, Sparkles } from 'lucide-react';
 import { Artifact } from './lib/supabase';
 import ArtifactCard from './components/ArtifactCard';
 import ArtifactModal from './components/ArtifactModal';
+import CustomCursor from './components/CustomCursor';
+import ParticleBackground from './components/ParticleBackground';
+import WaveText from './components/WaveText';
+import MorphIcon from './components/MorphIcon';
 import artifactsData from './data/artifacts.json';
 
 function App() {
@@ -45,11 +49,22 @@ function App() {
 
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
+      <CustomCursor />
+      <ParticleBackground />
+
       <div
-        className="fixed inset-0 opacity-30 pointer-events-none"
+        className="fixed inset-0 opacity-30 pointer-events-none z-1"
         style={{
-          background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(59, 130, 246, 0.15) 0%, transparent 50%)`,
+          background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(59, 130, 246, 0.2) 0%, rgba(139, 92, 246, 0.1) 30%, transparent 60%)`,
           transition: 'background 0.3s ease',
+        }}
+      />
+
+      <div
+        className="fixed inset-0 opacity-20 pointer-events-none z-1"
+        style={{
+          background: `radial-gradient(circle at ${100 - mousePosition.x}% ${100 - mousePosition.y}%, rgba(236, 72, 153, 0.15) 0%, transparent 50%)`,
+          transition: 'background 0.4s ease',
         }}
       />
 
@@ -58,21 +73,16 @@ function App() {
           <div className="max-w-7xl mx-auto px-6 py-8">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
-                <div className="relative">
-                  <Sparkles className="w-10 h-10 text-blue-500 animate-pulse" />
-                  <div className="absolute inset-0 blur-xl bg-blue-500 opacity-50 animate-pulse" />
-                </div>
+                <MorphIcon Icon={Sparkles} color="#3b82f6" size={40} />
                 <div>
-                  <h1 className="text-4xl font-bold tracking-tight">
-                    NeoMuse
-                  </h1>
+                  <WaveText text="NeoMuse" className="text-4xl font-bold tracking-tight" />
                   <p className="text-sm text-gray-400 mt-1">
                     Interactive 3D Art Gallery Experience
                   </p>
                 </div>
               </div>
               <div className="flex items-center gap-2 text-gray-400">
-                <Eye className="w-5 h-5" />
+                <MorphIcon Icon={Eye} color="#8b5cf6" size={20} />
                 <span className="text-sm">{artifacts.length} Artifacts</span>
               </div>
             </div>

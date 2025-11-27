@@ -25,10 +25,15 @@ Experience the interactive 3D art gallery with real-time animations and smooth t
 Experience cards that respond to your mouse movements with **real-time 3D tilt effects**. Each artifact card calculates perspective transformations based on cursor position, creating an engaging depth effect that brings the gallery to life.
 
 ### Intelligent Animations
+- **Custom Particle Cursor** - Unique cursor with trailing light particles and adaptive behavior
+- **Interactive Particle Network** - Real-time canvas animation with physics-based particle connections
+- **Glitch Effects** - RGB channel separation creating cyberpunk-style visual distortions
+- **Liquid Morphing** - Organic blob shapes that continuously transform
+- **Magnetic Card Effects** - Subtle element displacement based on cursor proximity
+- **3D Wave Text** - Typography that dynamically warps in 3D space
 - **Cascading entrance animations** - Cards fade in sequentially with staggered delays
-- **Smooth hover transitions** - Images scale and overlays appear with fluid timing
-- **Modal animations** - Scale and fade effects for viewing detailed information
-- **Background parallax** - Gradient spotlight follows your cursor across the screen
+- **Dual gradient spotlights** - Multiple layered lighting effects following cursor
+- **Modal animations** - Scale and fade effects with dynamic color-reactive backgrounds
 
 ### Production-Ready Architecture
 - **Supabase backend** with proper Row Level Security policies
@@ -42,12 +47,18 @@ Experience cards that respond to your mouse movements with **real-time 3D tilt e
 
 | Feature | Description |
 |---------|-------------|
+| **Custom Particle Cursor** | Interactive cursor with trailing particles and dynamic glow effects |
+| **Real-time Particle Network** | Canvas-based particle system that responds to mouse movement with connected nodes |
 | **3D Mouse Tracking** | Cards tilt and rotate based on cursor position using perspective transforms |
+| **Glitch Effects** | Random RGB split glitch animations on hover for cyberpunk aesthetics |
+| **Magnetic Interactions** | Elements subtly follow cursor movement creating depth |
+| **Liquid Morphing** | Organic shape-shifting animations on modal backgrounds and badges |
+| **Wave Text Animation** | 3D text that warps and scales based on proximity to cursor |
 | **Dynamic Color Themes** | Each artifact has its own color palette that influences UI elements |
-| **Real-time Database** | Content managed through Supabase with instant updates |
+| **Dual Gradient Spotlights** | Multiple layered gradients follow cursor for immersive lighting |
 | **Smooth Animations** | Custom CSS keyframes combined with React state management |
-| **Modal Detail View** | Full-screen presentation of artifacts with rich metadata |
-| **Optimized Performance** | Lazy loading, efficient re-renders, and optimized animations |
+| **Modal Detail View** | Full-screen presentation with interactive lighting effects |
+| **Optimized Performance** | GPU-accelerated transforms and requestAnimationFrame loops |
 
 ---
 
@@ -76,13 +87,17 @@ Experience cards that respond to your mouse movements with **real-time 3D tilt e
 neomuse/
 ├── src/
 │   ├── components/
-│   │   ├── ArtifactCard.tsx      # Interactive 3D card component
-│   │   └── ArtifactModal.tsx     # Detail view modal
+│   │   ├── ArtifactCard.tsx         # Interactive 3D card with glitch effects
+│   │   ├── ArtifactModal.tsx        # Liquid morphing modal with dynamic lighting
+│   │   ├── CustomCursor.tsx         # Particle trail cursor system
+│   │   ├── ParticleBackground.tsx   # Canvas-based interactive particle network
+│   │   ├── WaveText.tsx             # 3D text with proximity-based warping
+│   │   └── MorphIcon.tsx            # Animated icons with liquid morphing
 │   ├── lib/
-│   │   └── supabase.ts           # Database client & types
-│   ├── App.tsx                    # Main application component
-│   ├── main.tsx                   # Application entry point
-│   └── index.css                  # Global styles & animations
+│   │   └── supabase.ts              # Database client & types
+│   ├── App.tsx                       # Main application component
+│   ├── main.tsx                      # Application entry point
+│   └── index.css                     # Global styles & custom animations
 ├── supabase/
 │   └── migrations/
 │       └── create_artifacts_table.sql  # Database schema
