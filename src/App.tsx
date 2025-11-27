@@ -7,9 +7,13 @@ import CustomCursor from './components/CustomCursor';
 import ParticleBackground from './components/ParticleBackground';
 import WaveText from './components/WaveText';
 import MorphIcon from './components/MorphIcon';
+import GlassWing from './components/GlassWing';
 import artifactsData from './data/artifacts.json';
 
+type Gallery = 'main' | 'glass';
+
 function App() {
+  const [activeGallery, setActiveGallery] = useState<Gallery>('main');
   const [artifacts, setArtifacts] = useState<Artifact[]>([]);
   const [selectedArtifact, setSelectedArtifact] = useState<Artifact | null>(null);
   const [loading, setLoading] = useState(true);
@@ -47,8 +51,48 @@ function App() {
     setLoading(false);
   };
 
+  if (activeGallery === 'glass') {
+    return (
+      <div className="min-h-screen transition-colors duration-700">
+        <CustomCursor />
+
+        <header className="border-b border-gray-200/50 bg-white/40 backdrop-blur-xl sticky top-0 z-40 transition-all duration-700">
+          <div className="max-w-7xl mx-auto px-6 py-8">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-4">
+                <MorphIcon Icon={Sparkles} color="#6366f1" size={40} />
+                <div>
+                  <h1 className="text-4xl font-bold tracking-tight text-gray-900">NeoMuse</h1>
+                  <p className="text-sm text-gray-500 mt-1">
+                    Interactive 3D Art Gallery Experience
+                  </p>
+                </div>
+              </div>
+              <nav className="flex gap-2">
+                <button
+                  onClick={() => setActiveGallery('main')}
+                  className="px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 text-gray-600 hover:bg-gray-100"
+                >
+                  Main Gallery
+                </button>
+                <button
+                  onClick={() => setActiveGallery('glass')}
+                  className="px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 bg-gray-900 text-white shadow-lg"
+                >
+                  Glass Wing
+                </button>
+              </nav>
+            </div>
+          </div>
+        </header>
+
+        <GlassWing />
+      </div>
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-black text-white overflow-x-hidden">
+    <div className="min-h-screen bg-black text-white overflow-x-hidden transition-colors duration-700">
       <CustomCursor />
       <ParticleBackground />
 
@@ -69,7 +113,7 @@ function App() {
       />
 
       <div className="relative z-10">
-        <header className="border-b border-gray-800 bg-black/50 backdrop-blur-xl sticky top-0 z-40">
+        <header className="border-b border-gray-800 bg-black/50 backdrop-blur-xl sticky top-0 z-40 transition-all duration-700">
           <div className="max-w-7xl mx-auto px-6 py-8">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
@@ -81,10 +125,20 @@ function App() {
                   </p>
                 </div>
               </div>
-              <div className="flex items-center gap-2 text-gray-400">
-                <MorphIcon Icon={Eye} color="#8b5cf6" size={20} />
-                <span className="text-sm">{artifacts.length} Artifacts</span>
-              </div>
+              <nav className="flex gap-2">
+                <button
+                  onClick={() => setActiveGallery('main')}
+                  className="px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 bg-white/10 text-white shadow-lg"
+                >
+                  Main Gallery
+                </button>
+                <button
+                  onClick={() => setActiveGallery('glass')}
+                  className="px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 text-gray-400 hover:bg-white/5"
+                >
+                  Glass Wing
+                </button>
+              </nav>
             </div>
           </div>
         </header>
