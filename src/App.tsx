@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Eye, Sparkles } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import { Artifact } from './lib/supabase';
 import ArtifactCard from './components/ArtifactCard';
 import ArtifactModal from './components/ArtifactModal';

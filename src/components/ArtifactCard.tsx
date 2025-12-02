@@ -2,11 +2,6 @@ import { useState, useRef, MouseEvent, useEffect } from 'react';
 import { Artifact } from '../lib/supabase';
 import { Image as ImageIcon } from 'lucide-react';
 
-interface Position {
-  x: number;
-  y: number;
-}
-
 interface ArtifactCardProps {
   artifact: Artifact;
   onClick: () => void;
